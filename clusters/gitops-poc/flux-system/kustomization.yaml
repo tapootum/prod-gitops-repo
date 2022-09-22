@@ -5,12 +5,12 @@ resources:
 - gotk-sync.yaml
 patches:
   - patch: |
-    apiVersion: v1
-    kind: ServiceAccount
-    metadata:
-      name: kustomize-controller
-      annotations:
-        eks.amazonaws.com/role-arn: "arn:aws:iam::290913681714:policy/kustomization-controller-devops-83-dev"
-target:
-    kind: ServiceAccount
-    name: kustomize-controller
+      apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: kustomize-controller
+        annotations:
+          eks.amazonaws.com/role-arn: "arn:aws:iam::290913681714:policy/kustomization-controller-devops-83-dev"
+      target:
+        kind: ServiceAccount
+        name: kustomize-controller
